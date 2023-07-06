@@ -1,0 +1,32 @@
+.board {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-gap: 5px;
+	margin: 50px auto;
+	width: 600px;
+	height: 600px;
+	/* border: 1px solid black; */
+}
+
+table {
+    margin: auto;
+    background-color: white;
+}
+
+tr {
+	display: flex;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}

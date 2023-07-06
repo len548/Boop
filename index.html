@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="start_page" style="display: block;">
+        <h1> Start a game </h1>
+        <form id="form">
+            <label>The first player name: <input type="text" required /></label>
+            <br>
+            <label>The second player name: <input type="text" required /></label>
+            <br><br>
+            <div>
+                <label>Points to win: <input type="number" id="cells" value="5" min="1" max="20" required/></label>
+                <br>
+                <label>The dimension of the board: <input type="number" id="cells" value="6" min="4" max="15" required/></label>
+                <br>
+                <label>The number of kittens per player: <input type="number" id="limit" value="8" min="3" max="30"/></label>
+            </div>
+            <button type="submit">Start</button>
+        </form>
+        <audio id="start_sound" src="materials\start_game.mp3"></audio>
+    </div>
+    <div class="game_page" style="display: none;">
+        <h3>Current Player: <span id="play_now"></span></h3>
+        <h3 id="player1" style="color:gray;">(Gray): <span id="gray_point">0</span> pts</h3>
+        <h3 id="player2" style="color:orange;">(Orange): <span id="orange_point">0</span> pts</h3>
+        <h1 id="winner"></h1>
+        <button id="restart" style="display: none;">Restart</button>
+        <div class="board">
+            <audio id="placed_sound" src="materials\meow.mp3"></audio>
+            <audio id="earn_point_sound" src="materials\earn_point.mp3"></audio>
+            <table id="board"></table>
+        </div>
+        <div>
+            <h3>Benches</h3>
+            <table id="benches">
+                <tr data-bench="0"></tr>
+                <tr data-bench="1"></tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
